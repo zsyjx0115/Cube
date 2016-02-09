@@ -1,0 +1,107 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.contain{
+	-webkit-perspective: 800;
+	-webkit-perspective-origin: 28% 50%;
+	width: 80%;
+	height: 60%;
+	margin: 0 auto;
+}
+
+.contain .cube{
+	position: relative;
+	left: 35%;
+	top: 10%;
+	width: 300px;
+	height: 300px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-animation: cubeRotate 8s;
+	-webkit-transition:all 1s ease;
+	-webkit-transform-origin:150px 150px -150px;
+}
+.contain .side{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	opacity: 0.9;
+	background-size: cover;
+	background-position: center;
+}
+
+@-webkit-keyframes cubeRotate{
+    0%{
+        -webkit-transform:rotateX(0deg) rotateY(0deg);
+                transform:rotateX(0deg) rotateY(0deg);
+    }
+    50%{
+        -webkit-transform:rotateX(360deg) rotateY(360deg);
+                transform:rotateX(360deg) rotateY(360deg);
+    }
+    100%{
+    	 -webkit-transform:rotateX(0deg) rotateY(0deg);
+                transform:rotateX(0deg) rotateY(0deg);
+    }
+}
+.contain .side-left{
+	background-image: url(1.jpg);
+	-webkit-transform-origin:150px 150px -150px;
+	-webkit-transform: rotateY(-90deg);
+}
+
+.contain .side-right{
+	background-image: url(2.jpg);
+	-webkit-transform-origin:150px 150px -150px;
+	-webkit-transform: rotateY(90deg);
+}
+
+.contain .side-top{
+	background-image: url(3.jpg);
+	-webkit-transform-origin:150px 150px -150px;
+	-webkit-transform: rotateX(90deg);
+}
+
+.contain .side-bottom{
+	background-image: url(4.jpg);
+	-webkit-transform-origin:150px 150px -150px;
+	-webkit-transform: rotateX(-90deg);
+}
+
+.contain .side-front{
+	background-image: url(5.jpg);
+	-webkit-transform-origin:150px 150px -150px;
+}
+
+.contain .side-back{
+	background-image: url(6.jpg);
+	-webkit-transform-origin:150px 150px -150px;
+	-webkit-transform: translateZ(-300px);
+}
+
+.operation{
+	list-style: none;
+	margin: 30px auto;
+	width: 350px;
+}
+.operation li{
+	width: 150px;
+    height: 35px;
+    line-height: 30px;
+    margin: 5px;
+    background: #2ABF9E;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+}
